@@ -9,7 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+/** 
+ * @authores Jivago, Bruno, marcelo, Alexandre
+ *
+ */
 @Entity
 @Table(name = "categorianoticia")
 public class CategoriaNoticia {

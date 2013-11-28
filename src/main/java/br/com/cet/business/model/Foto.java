@@ -3,7 +3,10 @@ package br.com.cet.business.model;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
+/** 
+ * @authores Jivago, Bruno, marcelo, Alexandre
+ *
+ */
 @Entity
 public class Foto extends Imagem {
 

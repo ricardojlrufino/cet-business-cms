@@ -9,7 +9,10 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
-
+/** 
+ * @authores Jivago, Bruno, marcelo, Alexandre
+ *
+ */
 @Entity
 @Table(name="imagem")
 @Inheritance(strategy = InheritanceType.JOINED)
