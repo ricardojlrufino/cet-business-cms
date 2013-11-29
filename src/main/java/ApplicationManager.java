@@ -1,3 +1,6 @@
+import br.com.cet.cms.action.ExemploAction;
+import br.com.cet.cms.action.IndexAction;
+
 
 public class ApplicationManager extends org.mentawai.core.ApplicationManager {
 	
@@ -10,9 +13,15 @@ public class ApplicationManager extends org.mentawai.core.ApplicationManager {
 	@Override
 	public void loadActions() {
 
-//		action(ClienteAction.class, "cadastro")
-//			.on(SUCCESS, fwd("/jsp/Cliente/cadastro.jsp"))
-//			.on(ERROR, fwd("/jsp/Cliente/cadastro.jsp"));
+		action("/Index", IndexAction.class)
+			.on(SUCCESS, fwd("/jsp/Site/index.page"))
+			.on(ERROR, fwd("/jsp/Exemplo/index.page"));
+		
+		action(ExemploAction.class, "cadastro")
+			.on(SUCCESS, fwd("/jsp/Exemplo/cadastro.page"))
+			.on(ERROR, fwd("/jsp/Exemplo/cadastro.page"));
+		
+		
 //		
 //		action(ClienteAction.class, "salvar")
 //			.filter(new ClienteValidator())

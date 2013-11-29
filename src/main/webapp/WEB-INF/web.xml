@@ -16,5 +16,14 @@
         <servlet-name>Controller</servlet-name>
         <url-pattern>*.mtw</url-pattern>
     </servlet-mapping>
- 
+
+	<servlet>
+		<servlet-name>TemplateServlet</servlet-name>
+		<servlet-class>org.mentawai.template.JspTemplateServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TemplateServlet</servlet-name>
+		<url-pattern>*.page</url-pattern>
+	</servlet-mapping> 
 </web-app>
