@@ -21,7 +21,6 @@ public class ApplicationManager extends org.mentawai.core.ApplicationManager {
 			.on(SUCCESS, fwd("/jsp/Exemplo/cadastro.page"))
 			.on(ERROR, fwd("/jsp/Exemplo/cadastro.page"));
 		
-		
 //		
 //		action(ClienteAction.class, "salvar")
 //			.filter(new ClienteValidator())
