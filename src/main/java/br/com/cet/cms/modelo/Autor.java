@@ -1,4 +1,4 @@
-package br.com.cet.business.model;
+package br.com.cet.cms.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,15 +14,16 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "categorianoticia")
-public class CategoriaNoticia {
+@Table(name = "autor")
+public class Autor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	private String descricao;
+	private String nome;
+	private String sexo;
 	
-	@OneToMany(mappedBy = "categoriaNoticia")
+	@OneToMany(mappedBy="autor")
 	private List<Noticia> noticias = new ArrayList<Noticia>();
 
 	public long getId() {
@@ -33,20 +34,20 @@ public class CategoriaNoticia {
 		this.id = id;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public List<Noticia> getNoticias() {
-		return noticias;
+	public String getSexo() {
+		return sexo;
 	}
 
-	public void setNoticias(List<Noticia> noticias) {
-		this.noticias = noticias;
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 
 }

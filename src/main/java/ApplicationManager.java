@@ -13,7 +13,7 @@ public class ApplicationManager extends org.mentawai.core.ApplicationManager {
 	@Override
 	public void loadActions() {
 
-		action("/Index", IndexAction.class)
+		action("/Principal", IndexAction.class)
 			.on(SUCCESS, fwd("/jsp/Site/index.page"))
 			.on(ERROR, fwd("/jsp/Exemplo/index.page"));
 		

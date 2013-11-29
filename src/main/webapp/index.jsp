@@ -3,7 +3,7 @@
 <%@ taglib prefix="mtw" uri="http://www.mentaframework.org/tags-mtw/" %>
 
 
-<% response.sendRedirect("Index.mtw"); %>
+<% response.sendRedirect("Principal.mtw"); %>
 
 <%-- 
 <mtw:isLogged negate="true">

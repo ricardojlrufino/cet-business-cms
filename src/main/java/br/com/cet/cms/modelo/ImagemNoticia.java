@@ -1,4 +1,4 @@
-package br.com.cet.business.model;
+package br.com.cet.cms.modelo;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
