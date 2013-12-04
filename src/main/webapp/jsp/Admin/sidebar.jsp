@@ -10,19 +10,19 @@
         <div class="accordion" id="accordion2">
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a class="accordion-toggle active b_F79999" href="index-2.html"><i class="icon-dashboard"></i> <span>Painel</span></a>
+              <a class="accordion-toggle active b_F79999" href="/AdminAction.admin.mtw"><i class="icon-dashboard"></i> <span>Painel</span></a>
             </div>
           </div>
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a class="accordion-toggle b_C3F7A7 collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse1"><i class="icon-magic"></i> <span>Features</span></a>
+              <a class="accordion-toggle b_C3F7A7 collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse1"><i class="icon-magic"></i> <span>Loja</span></a>
             </div>
             <div id="collapse1" class="accordion-body collapse">
               <div class="accordion-inner">
-                <a class="accordion-toggle" href="ui_features.html"><i class="icon-star"></i> UI Features</a>
-                <a class="accordion-toggle" href="forms.html"><i class="icon-list-alt"></i> Forms</a>
-                <a class="accordion-toggle" href="tables.html"><i class="icon-table"></i> Tables</a>
-                <a class="accordion-toggle" href="buttons.html"><i class="icon-circle"></i> Buttons</a>
+                <a class="accordion-toggle" href="/CadProdutoAction.cadastro.mtw"><i class="icon-star"></i> Cadastrar Produto</a>
+                <a class="accordion-toggle" href="/CategoriaProdutoAction.cadastro.mtw"><i class="icon-list-alt"></i>Categorias</a>
+<!--                 <a class="accordion-toggle" href="tables.html"><i class="icon-table"></i> Tables</a> -->
+<!--                 <a class="accordion-toggle" href="buttons.html"><i class="icon-circle"></i> Buttons</a> -->
               </div>
             </div>
           </div>

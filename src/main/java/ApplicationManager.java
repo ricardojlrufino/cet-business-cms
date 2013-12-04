@@ -1,4 +1,6 @@
-import br.com.cet.cms.action.ExemploAction;
+import br.com.cet.cms.action.AdminAction;
+import br.com.cet.cms.action.CategoriaProdutoAction;
+import br.com.cet.cms.action.CadProdutoAction;
 import br.com.cet.cms.action.IndexAction;
 
 
@@ -17,10 +19,17 @@ public class ApplicationManager extends org.mentawai.core.ApplicationManager {
 			.on(SUCCESS, fwd("/jsp/Site/index.page"))
 			.on(ERROR, fwd("/jsp/Exemplo/index.page"));
 		
-		action(ExemploAction.class, "cadastro")
-			.on(SUCCESS, fwd("/jsp/Exemplo/cadastro.page"))
-			.on(ERROR, fwd("/jsp/Exemplo/cadastro.page"));
+		action(AdminAction.class, "admin")
+		.on(SUCCESS, fwd("/jsp/Admin/admin.page"))
+		.on(ERROR, fwd("/jsp/Admin/admin.page"));
 		
+		action(CadProdutoAction.class, "cadastro")
+			.on(SUCCESS, fwd("/jsp/Cadastro/cadastro.page"))
+			.on(ERROR, fwd("/jsp/Cadastro/cadastro.page"));
+
+		action(CategoriaProdutoAction.class, "cadastro")
+			.on(SUCCESS, fwd("/jsp/CategoriaProduto/cadastro.page"))
+			.on(ERROR, fwd("/jsp/CategoriaProduto/cadastro.page"));
 //		
 //		action(ClienteAction.class, "salvar")
 //			.filter(new ClienteValidator())
