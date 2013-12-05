@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.mentawai.core.ApplicationManager;
 import org.mentawai.template.ConventionController;
 import org.mentawai.template.Page;
-import org.mentawai.template.TemplateException;
 import org.mentawai.template.TemplateServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -8,7 +8,7 @@
 
    <!-- provedor/implementacao do JPA -->
    <provider>org.hibernate.ejb.HibernatePersistence</provider>
-
+ 
    <!-- entidade mapaeada -->
    <class>br.com.cet.cms.modelo.Exemplo</class>
 

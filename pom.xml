@@ -73,7 +73,7 @@
 						<contextPath>/</contextPath>
 					</webAppConfig>
 					<scanIntervalSeconds>1</scanIntervalSeconds>
-<!-- 					<reload>manual</reload> -->
+					<!-- <reload>manual</reload> -->
 					<connectors>
 						<connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
 							<port>8080</port>

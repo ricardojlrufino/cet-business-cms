@@ -16,8 +16,7 @@
 	<mtw:submit value="Salvar"/>
 </fieldset>
 </mtw:form>
-
-
+ 
 <fieldset>
 	<legend>Listagem </legend>	
 	<jsp:include page="tabela.jsp" />
