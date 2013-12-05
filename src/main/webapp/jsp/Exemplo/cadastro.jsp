@@ -3,6 +3,7 @@
 
 <%@ taglib prefix="mtw" uri="http://www.mentaframework.org/tags-mtw/" %>
 
+<div class="main_container" id="forms_page">
 
 <mtw:form action="ExemploAction.salvar.mtw" method="post">
 <fieldset>
@@ -21,3 +22,5 @@
 	<legend>Listagem </legend>	
 	<jsp:include page="tabela.jsp" />
 </fieldset>
+
+</div>

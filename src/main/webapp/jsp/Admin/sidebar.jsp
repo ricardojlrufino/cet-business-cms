@@ -40,7 +40,7 @@
           </div>
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a class="accordion-toggle b_F6F1A2" href="tasks.html"><i class="icon-tasks"></i> <span>Tasks</span></a>
+              <a class="accordion-toggle b_F6F1A2" href="ExemploAction.cadastro.mtw"><i class="icon-tasks"></i> <span>Exemplo</span></a>
             </div>
           </div>
           <div class="accordion-group">

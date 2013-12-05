@@ -5,4 +5,5 @@
 
 INDEX !!
 
-<a href="AdminAction.admin.mtw">Exemplo</a>
+<a href="AdminAction.admin.mtw">Admin</a>
+<a href="ExemploAction.cadastro.mtw">Exemplo</a>
