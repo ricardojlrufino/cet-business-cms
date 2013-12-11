@@ -7,7 +7,7 @@
             <li class="active">Categorias</li>
           </ul>
           <h2 class="heading">
-                Cadastrar categorias
+                Cadastrar Cliente
                 <div class="btn-group pull-right">
                   <button class="btn"><i class="icon-download-alt"></i> Editar</button>
                   <!--<button class="btn"><i class="icon-envelope"></i> Email</button>-->
@@ -18,7 +18,7 @@
         <div class="row-fluid">
           <div class="widget widget-padding span12">
             <div class="widget-header">
-              <i class="icon-list-alt"></i><h5>Dados da categoria</h5>
+              <i class="icon-list-alt"></i><h5>Dados do Cliente</h5>
               <div class="widget-buttons">
                   <a href="#" data-title="Collapse" data-collapsed="false" class="tip collapse"><i class="icon-chevron-up"></i></a>
               </div>
@@ -27,10 +27,15 @@
               <div class="widget-forms clearfix">
                 <form class="form-horizontal">
                   <div class="control-group">
-                    <label class="control-label">Nome</label>
+                    <label class="control-label">Nome:</label>
                     <div class="controls">
-                      <input class="span7" type="text" placeholder="Nome da categoria">
-                      <span class="help-inline">Apenas o nome da categorias.</span>
+                      <input class="span7" type="text" placeholder="Nome do cliente">
+                      <span class="help-inline">Apenas o nome do cliente.</span>
+                    </div>
+                    <label class="control-label">CPF:</label>
+                    <div class="controls">
+                      <input class="span7" type="text" placeholder="CPF">
+                      <span class="help-inline">Apenas números.</span>
                     </div>
                   </div>
                   <!--<div class="control-group">
@@ -40,14 +45,14 @@
                     </div>
                   </div>-->
                   <div class="control-group">
-                    <label class="control-label">Pai</label>
+                    <label class="control-label">Estado</label>
                       <div class="controls">
                         <select tabindex="1" data-placeholder="Selecione.." class="span7">
                            <option value=""></option>
-                           <option value="Category 1">First Dropdown</option>
-                           <option value="Category 2">Second Dropdown</option>
-                           <option value="Category 3">Third Dropdown</option>
-                           <option value="Category 4">Fourth Dropdown</option>
+                           <option value="Estado">MA</option>
+                           <option value="Estado">PI</option>
+                           <option value="Estado">CE</option>
+                           <option value="Estado">TO</option>
                         </select>
                      </div>
                   </div>

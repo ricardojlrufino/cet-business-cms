@@ -11,7 +11,10 @@
  
    <!-- entidade mapaeada -->
    <class>br.com.cet.cms.modelo.Exemplo</class>
-
+   <!--  <class>br.com.cet.cms.modelo.Produto</class>
+   <class>br.com.cet.cms.modelo.Cliente</class>
+   <class>br.com.cet.cms.modelo.Usuario</class>
+-->
    <exclude-unlisted-classes>true</exclude-unlisted-classes>
    
    <properties>
