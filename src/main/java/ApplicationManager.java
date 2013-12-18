@@ -9,6 +9,7 @@ import br.com.cet.cms.action.ClienteAction;
 import br.com.cet.cms.action.ControlePaginaAction;
 import br.com.cet.cms.action.ExemploAction;
 import br.com.cet.cms.action.IndexAction;
+import br.com.cet.cms.action.MenuAction;
 import br.com.cet.cms.action.UsuarioAction;
 
 public class ApplicationManager extends org.mentawai.core.ApplicationManager {
@@ -79,6 +80,7 @@ public class ApplicationManager extends org.mentawai.core.ApplicationManager {
 				fwd("/jsp/CategoriaProduto/cadastro.page"));
 
 		// CADASTRO DE CATEGORIA DA PÁGINA
+		
 		action(ControlePaginaAction.class, "cadastro").on(SUCCESS,
 				fwd("/jsp/ControlePagina/controlePaginas.page")).on(ERROR,
 				fwd("/jsp/ControlePagina/controlePaginas.page"));
@@ -94,6 +96,14 @@ public class ApplicationManager extends org.mentawai.core.ApplicationManager {
 		action(CategoriaMenuAction.class, "editar").on(SUCCESS,
 				fwd("/jsp/ControlePagina/categoriaCadastro.page")).on(ERROR,
 				fwd("/jsp/ControlePagina/errorCadastro.page"));
+		
+		action(CategoriaMenuAction.class, "excluir").on(SUCCESS,
+				fwd("/jsp/ControlePagina/categoriaCadastro.page")).on(ERROR,
+				fwd("/jsp/ControlePagina/errorCadastro.page"));
+		
+		action(MenuAction.class, "cadastro").on(SUCCESS,
+				fwd("/jsp/ControlePagina/cadastroMenu.page")).on(ERROR,
+				fwd("/jsp/ControlePagina/cadastroMenu.page"));
 	}
 
 	@Override
