@@ -20,6 +20,7 @@
 					data-toggle="collapse" data-parent="#accordion2" href="#collapse1"><i
 					class="icon-magic"></i> <span>Loja</span></a>
 			</div>
+
 			<div id="collapse1" class="accordion-body collapse">
 				<div class="accordion-inner">
 					<a class="accordion-toggle" href="/ClienteAction.cadastro.mtw"><i
@@ -32,6 +33,9 @@
 				</div>
 			</div>
 		</div>
+		<!-- Finaliza accordion-group -->
+
+
 		<div class="accordion-group">
 			<div class="accordion-heading">
 				<a class="accordion-toggle b_9FDDF6 collapsed"
@@ -54,6 +58,27 @@
 					href="ExemploAction.cadastro.mtw"><i class="icon-tasks"></i> <span>Exemplo</span></a>
 			</div>
 		</div>
+		
+		<!-- Controle de páginas-->
+		
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle b_9FDDF6 collapsed"
+					data-toggle="collapse" data-parent="#accordion3" href="#collapse3"><i
+					class="icon-reorder"></i> <span>Controle de paginas</span></a>
+			</div>
+			<div id="collapse3" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<a class="accordion-toggle" href="notifications.html"><i
+						class="icon-rss"></i> Cadastro de categorias</a> <a class="accordion-toggle"
+						href="calendar.html"><i class="icon-calendar"></i> Calendar</a> <a
+						class="accordion-toggle" href="gallery.html"><i
+						class="icon-picture"></i> Gallery</a>
+				</div>
+			</div>
+		</div>
+	
+
 		<div class="accordion-group">
 			<div class="accordion-heading">
 				<a class="accordion-toggle b_C1F8A9" href="analytics.html"><i
@@ -68,8 +93,8 @@
 		</div>
 		<div class="accordion-group">
 			<div class="accordion-heading">
-				<a class="accordion-toggle b_F5C294" href="/UsuarioAction.listar.mtw"><i
-					class="icon-user"></i> <span>Usuários</span></a>
+				<a class="accordion-toggle b_F5C294"
+					href="/UsuarioAction.listar.mtw"><i class="icon-user"></i> <span>Usuários</span></a>
 			</div>
 		</div>
 	</div>
