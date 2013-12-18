@@ -108,6 +108,14 @@ public class ApplicationManager extends org.mentawai.core.ApplicationManager {
 		action(MenuAction.class, "salvar").on(SUCCESS,
 				redir(MenuAction.class, "cadastro")).on(ERROR,
 				chain(MenuAction.class, "cadastro"));
+		
+		action(MenuAction.class, "editar").on(SUCCESS,
+				fwd("/jsp/ControlePagina/cadastroMenu.page")).on(ERROR,
+				fwd("/jsp/ControlePagina/errorCadastro.page"));
+		
+		action(MenuAction.class, "excluir").on(SUCCESS,
+				fwd("/jsp/ControlePagina/cadastroMenu.page")).on(ERROR,
+				fwd("/jsp/ControlePagina/errorCadastro.page"));
 	}
 
 	@Override

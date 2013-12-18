@@ -13,9 +13,9 @@
 			<li>Nenhum Encontrato !</li>
 		</mtw:isEmpty>
 		<mtw:loop var="menu">
-			<li><mtw:out value="menu.nome_menu" /> - <a
-				href="MenuAction.editar.mtw?id_cat=${menu.id_menu}">Editar</a> | <a
-				href="MenuAction.excluir.mtw?id_cat=${menu.id_menu}">Excluir</a></li>
+			<li><mtw:out value="menu.nome_menu" /> - <mtw:out value="menu.nome_categoria" /> <a
+				href="MenuAction.editar.mtw?id_menu=${menu.id_menu}">Editar</a> | <a
+				href="MenuAction.excluir.mtw?id_menu=${menu.id_menu}">Excluir</a></li>
 		</mtw:loop>
 	</mtw:list>
 </ul>

@@ -41,13 +41,14 @@ public class MenuAction extends BaseAction implements ICrudAction {
 			menu.setCategorias(categoria);
 
 			entityManager.persist(menu);
-	
+
 		} else {
 
-			categoria = entityManager.find(MenuCategoria.class,input.getLong("categorias"));
+			categoria = entityManager.find(MenuCategoria.class,
+					input.getLong("categorias"));
 			menu.setNome_menu((String) input.getValue("nome_menu"));
 			menu.setCategorias(categoria);
-			
+
 			input.inject(menu);
 			entityManager.persist(menu);
 
@@ -58,21 +59,40 @@ public class MenuAction extends BaseAction implements ICrudAction {
 
 	@Override
 	public String editar() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
+
+		Menu buscarMenu = entityManager.find(Menu.class,input.getLong("id_menu"));
+
+		output.setObject(buscarMenu);
+		output.setValue("nome_menu", buscarMenu.getNome_menu());
+		
+		listar();
+
+		return SUCCESS;
 	}
 
 	@Override
 	public String excluir() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
+
+		try {
+			Menu buscarMenu = entityManager.find(Menu.class, input.getLong("id_menu"));
+			entityManager.remove(buscarMenu);
+		} catch (Exception e) {
+			output.setValue("error", "Error ao excluir o item");
+		}
+
+		listar();
+		return SUCCESS;
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public String listar() throws Exception {
-		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
-		List<Menu> listarMenu = entityManager.createQuery("from Menu").getResultList();
+		EntityManager entityManager = (EntityManager) input
+				.getValue("entityManager");
+		List<Menu> listarMenu = entityManager.createQuery("from Menu")
+				.getResultList();
 
 		output.setValue("listarMenu", listarMenu);
 
@@ -87,6 +107,7 @@ public class MenuAction extends BaseAction implements ICrudAction {
 
 	public String listaCategorias() throws Exception {
 		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
+		@SuppressWarnings("unchecked")
 		List<MenuCategoria> listaCategoria = entityManager.createQuery("from MenuCategoria").getResultList();
 
 		output.setValue("listaCategoria", listaCategoria);
