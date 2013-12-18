@@ -1,5 +1,8 @@
 package br.com.cet.cms.modelo;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +23,7 @@ public class Menu {
 	@Column(unique=true)
 	private String nome_menu;
 	@OneToMany
-	private MenuCategoria categoria;
+	private Collection<MenuCategoria> categoria = new ArrayList<MenuCategoria>(); 
 
 	public long getId_menu() {
 		return id_menu;
@@ -38,11 +41,11 @@ public class Menu {
 		this.nome_menu = nome_menu;
 	}
 
-	public MenuCategoria getCategoria() {
+	public Collection<MenuCategoria> getCategoria() {
 		return categoria;
 	}
-
-	public void setCategoria(MenuCategoria categoria) {
+	
+	public void setCategoria(Collection<MenuCategoria> categoria) {
 		this.categoria = categoria;
 	}
 
