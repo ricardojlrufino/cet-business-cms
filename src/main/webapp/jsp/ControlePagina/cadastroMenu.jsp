@@ -7,23 +7,26 @@
 
 	<mtw:form action="CategoriaMenuAction.salvar.mtw" method="post">
 		<fieldset>
-			<legend>Cadastro da categoria de menu</legend>
+			<legend>Cadastro de menu</legend>
 			<mtw:input name="id_menu" type="hidden" />
 
-			<mtw:isNull test="id_menu" negate="true"><mtw:out value="id_menu" />
+			<mtw:isNull test="id_menu" negate="true">
+				<mtw:out value="id_menu" />
 			</mtw:isNull>
 
-			<label> Tipo categoria: </label>
-			<mtw:input name="nome_cat" /><br>
+			<label> Nome do menu: </label> 
 			
+		
+			<mtw:select name="categorias" list="listaCategorias" emptyField="true"/>
+
 
 			<mtw:submit value="Salvar" />
 		</fieldset>
 	</mtw:form>
 
-	<fieldset>
-		<legend>Listagem </legend>
-		<jsp:include page="tabelaMenu.jsp" />
-	</fieldset>
+	<!-- 	<fieldset> -->
+	<!-- 		<legend>Listagem </legend> -->
+	<%-- 		<jsp:include page="tabelaMenu.jsp" /> --%>
+	<!-- 	</fieldset> -->
 
 </div>

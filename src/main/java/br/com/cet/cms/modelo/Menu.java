@@ -8,13 +8,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  * @authores Glêsio Santos, Francisco Eduardo, Helio, Roberto Marinho e Adriano
  * 
  */
 
-@Entity(name="menu")
+@Entity
+@Table(name="menu")
 public class Menu {
 
 	@Id
