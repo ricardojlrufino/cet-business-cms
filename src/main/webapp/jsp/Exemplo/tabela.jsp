@@ -12,10 +12,10 @@
 		<mtw:isEmpty>
 			<li>Nenhum Encontrato !</li>
 		</mtw:isEmpty>
-		<mtw:loop var="atual">
-			<li><mtw:out value="atual.nome" /> <mtw:out value="atual.cpf" /> <a
-				href="ExemploAction.editar.mtw?id=${atual.id}">Editar</a> | <a
-				href="ExemploAction.excluir.mtw?id=${atual.id}">Excluir</a></li>
+		<mtw:loop var="cat">
+			<li><mtw:out value="cat.nome_cat" /> <mtw:out value="cat.nome_cat" /> <a
+				href="CategoriaMenuAction.editar.mtw?id=${cat.id}">Editar</a> | <a
+				href="CategoriaMenuAction.excluir.mtw?id=${cat.id}">Excluir</a></li>
 		</mtw:loop>
 	</mtw:list>
 </ul>

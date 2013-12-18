@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -14,7 +15,8 @@ import javax.persistence.TemporalType;
  *
  */
 
-@Entity(name = "menuCategoria")
+@Entity
+@Table(name="menuCategoria")
 public class MenuCategoria {
 
 	@Id
