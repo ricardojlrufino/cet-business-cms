@@ -14,7 +14,7 @@ import javax.persistence.OneToMany;
  * 
  */
 
-@Entity(name = "menu")
+@Entity(name="menu")
 public class Menu {
 
 	@Id

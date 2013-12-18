@@ -10,7 +10,7 @@
 			<legend>Cadastro da categoria de menu</legend>
 			<mtw:input name="id_cat" type="hidden" />
 
-			<mtw:isNull test="id_cat" negate="true">#<mtw:out value="id_cat" />
+			<mtw:isNull test="id_cat" negate="true"><mtw:out value="id_cat" />
 			</mtw:isNull>
 
 			<label> Tipo categoria: </label>

@@ -30,14 +30,15 @@ public class CategoriaMenuAction extends BaseAction implements ICrudAction{
 		MenuCategoria categoria = new MenuCategoria();
 		
 		if(id <= 0){
-			
 			categoria.setNome_categoria((String) input.getValue("nome_cat"));
 			categoria.setDataCadatro(new Date());
 			
 			entityManager.persist(categoria);
 			
 		}else{
-			return ERROR;			
+			MenuCategoria categoriaResult = entityManager.find(MenuCategoria.class, id);
+			input.inject(categoriaResult);
+			entityManager.persist(categoriaResult);
 		}
 				
 		
@@ -53,6 +54,7 @@ public class CategoriaMenuAction extends BaseAction implements ICrudAction{
 		MenuCategoria buscarCategoria = entityManager.find(MenuCategoria.class, id);
 		
 		output.setObject(buscarCategoria);
+		listar();
 		
 		return SUCCESS;
 	}
@@ -65,6 +67,7 @@ public class CategoriaMenuAction extends BaseAction implements ICrudAction{
 
 	@Override
 	public String listar() throws Exception {
+		
 		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
 		
 		List<MenuCategoria> listar = entityManager.createQuery("from MenuCategoria").getResultList();
