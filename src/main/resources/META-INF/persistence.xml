@@ -24,8 +24,8 @@
 			<!-- dados da conexao -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1/cet_cms" />
-			<property name="javax.persistence.jdbc.user" value="glesio" />
-			<property name="javax.persistence.jdbc.password" value="gle102030" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
 
 			<!-- propriedades do hibernate -->
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
