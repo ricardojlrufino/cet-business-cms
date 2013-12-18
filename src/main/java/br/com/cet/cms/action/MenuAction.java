@@ -18,15 +18,42 @@ public class MenuAction extends BaseAction implements ICrudAction {
 
 	@Override
 	public String cadastro() throws Exception {
-//		listar();
+		listar();
 		listaCategorias();
 		return SUCCESS;
 	}
 
 	@Override
 	public String salvar() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+
+		EntityManager entityManager = (EntityManager) input
+				.getValue("entityManager");
+		long id_menu = input.getLong("id_menu");
+		Menu menu = new Menu();
+		MenuCategoria categoria = new MenuCategoria();
+
+		if (id_menu <= 0) {
+
+			categoria = entityManager.find(MenuCategoria.class,
+					input.getLong("categorias"));
+
+			menu.setNome_menu((String) input.getValue("nome_menu"));
+			menu.setCategorias(categoria);
+
+			entityManager.persist(menu);
+	
+		} else {
+
+			categoria = entityManager.find(MenuCategoria.class,input.getLong("categorias"));
+			menu.setNome_menu((String) input.getValue("nome_menu"));
+			menu.setCategorias(categoria);
+			
+			input.inject(menu);
+			entityManager.persist(menu);
+
+		}
+
+		return SUCCESS;
 	}
 
 	@Override
@@ -41,10 +68,10 @@ public class MenuAction extends BaseAction implements ICrudAction {
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public String listar() throws Exception {
-		EntityManager entityManager = (EntityManager) input
-				.getValue("entityManager");
+		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
 		List<Menu> listarMenu = entityManager.createQuery("from Menu").getResultList();
 
 		output.setValue("listarMenu", listarMenu);
@@ -58,10 +85,9 @@ public class MenuAction extends BaseAction implements ICrudAction {
 		return null;
 	}
 
-	
 	public String listaCategorias() throws Exception {
 		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
-		List<Menu> listaCategoria = entityManager.createQuery("from MenuCategoria").getResultList();
+		List<MenuCategoria> listaCategoria = entityManager.createQuery("from MenuCategoria").getResultList();
 
 		output.setValue("listaCategoria", listaCategoria);
 

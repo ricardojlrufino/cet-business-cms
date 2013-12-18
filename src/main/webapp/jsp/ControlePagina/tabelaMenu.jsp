@@ -8,7 +8,7 @@
 <%-- <div style="color:red">Erro: ${erro}</div> --%>
 
 <ul>
-	<mtw:list value="listaMenu">
+	<mtw:list value="listarMenu">
 		<mtw:isEmpty>
 			<li>Nenhum Encontrato !</li>
 		</mtw:isEmpty>

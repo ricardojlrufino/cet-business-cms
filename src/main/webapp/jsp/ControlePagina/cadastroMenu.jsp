@@ -5,7 +5,7 @@
 
 <div class="main_container" id="forms_page">
 
-	<mtw:form action="CategoriaMenuAction.salvar.mtw" method="post">
+	<mtw:form action="MenuAction.salvar.mtw" method="post">
 		<fieldset>
 			<legend>Cadastro de menu</legend>
 			<mtw:input name="id_menu" type="hidden" />
@@ -13,20 +13,30 @@
 			<mtw:isNull test="id_menu" negate="true">
 				<mtw:out value="id_menu" />
 			</mtw:isNull>
-
-			<label> Nome do menu: </label> 
 			
-		
-			<mtw:select name="categorias" list="listaCategorias" emptyField="true"/>
+			<label>Menu:</label>
+			<mtw:input name="nome_menu"/><br>
+			
 
+			<label> Categoria: </label>
+			<select name="categorias">
+				<mtw:list value="listaCategoria">
+					<mtw:isEmpty>Nenhuma lista disponivel</mtw:isEmpty>
+						<option selected="selected">selecionar categoria</option>
+					<mtw:loop var="cat">
+						<option value="<mtw:out value="cat.id_categoria" />"><mtw:out value="cat.nome_categoria" /></option>
+					</mtw:loop>
 
+				</mtw:list>
+			</select>
+			<br/>
 			<mtw:submit value="Salvar" />
 		</fieldset>
 	</mtw:form>
 
-	<!-- 	<fieldset> -->
-	<!-- 		<legend>Listagem </legend> -->
-	<%-- 		<jsp:include page="tabelaMenu.jsp" /> --%>
-	<!-- 	</fieldset> -->
+		<fieldset>
+			<legend>Listagem </legend>
+			<jsp:include page="tabelaMenu.jsp" />
+		</fieldset>
 
 </div>

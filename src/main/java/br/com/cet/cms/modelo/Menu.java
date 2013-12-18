@@ -7,6 +7,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -24,8 +26,9 @@ public class Menu {
 	private long id_menu;
 	@Column(unique=true)
 	private String nome_menu;
-	@OneToMany
-	private Collection<MenuCategoria> categoria = new ArrayList<MenuCategoria>(); 
+	@ManyToOne
+	@JoinColumn(name="cat_id")
+	private MenuCategoria categorias; 
 
 	public long getId_menu() {
 		return id_menu;
@@ -43,12 +46,12 @@ public class Menu {
 		this.nome_menu = nome_menu;
 	}
 
-	public Collection<MenuCategoria> getCategoria() {
-		return categoria;
+	public MenuCategoria getCategorias() {
+		return categorias;
 	}
 	
-	public void setCategoria(Collection<MenuCategoria> categoria) {
-		this.categoria = categoria;
+	public void setCategorias(MenuCategoria categorias) {
+		this.categorias = categorias;
 	}
 
 }

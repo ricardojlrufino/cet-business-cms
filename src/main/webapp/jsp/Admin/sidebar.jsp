@@ -69,11 +69,10 @@
 			</div>
 			<div id="collapse3" class="accordion-body collapse">
 				<div class="accordion-inner">
-					<a class="accordion-toggle" href="notifications.html"><i
-						class="icon-rss"></i> Cadastro de categorias</a> <a class="accordion-toggle"
-						href="calendar.html"><i class="icon-calendar"></i> Calendar</a> <a
-						class="accordion-toggle" href="gallery.html"><i
-						class="icon-picture"></i> Gallery</a>
+					<a class="accordion-toggle" href="CategoriaMenuAction.cadastro.mtw">
+					<i class="icon-rss"></i> Cadastro de categorias</a>
+					<a class="accordion-toggle" href="MenuAction.cadastro.mtw"><i class="icon-rss"></i> Cadastro de menus</a> <a
+						class="accordion-toggle" href="gallery.html"><i	class="icon-rss"></i> Cadastro de páginas</a>
 				</div>
 			</div>
 		</div>
