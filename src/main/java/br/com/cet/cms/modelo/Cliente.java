@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -32,7 +33,8 @@ import javax.persistence.TemporalType;
 		private String situacao;
 		  @Column(name = "status",nullable = false)
 		private Boolean status;
-		  @Column(name = "usuario",nullable = false)
+		  
+		  @OneToOne
 		private Usuario usuario;
 		  @Column(name = "nome",nullable = false)
 		private String nome;
@@ -59,7 +61,14 @@ import javax.persistence.TemporalType;
 	   @Column(name = "bairro",nullable = false)
 		private String bairro;
 
-
+	   public Cliente() {
+		}
+		
+		public Cliente(String nome) {
+			super();
+			this.nome = nome;
+		}
+	   
 		public String getNome() {
 			return nome;
 		}

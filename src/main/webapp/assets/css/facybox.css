@@ -11,36 +11,40 @@
 	min-width: 40px;
 	min-height: 40px;
 }
-#facybox .w,  #facybox .e, #facybox  .nw,
-#facybox .ne, #facybox .sw, #facybox .se {
+
+#facybox .w,#facybox .e,#facybox  .nw,#facybox .ne,#facybox .sw,#facybox .se
+	{
 	min-height: 18px;
 	min-width: 13px;
 }
-#facybox .n, #facybox .s {
+
+#facybox .n,#facybox .s {
 	background-repeat: repeat-x;
 	height: 18px;
 }
-#facybox .w, #facybox .e {
+
+#facybox .w,#facybox .e {
 	background-repeat: repeat-y;
 }
 
-#facybox .nw, #facybox .ne, #facybox .sw, #facybox .se,
-#facybox a.next, #facybox a.prev,
-#facybox .closek #facybox .loading {
+#facybox .nw,#facybox .ne,#facybox .sw,#facybox .se,#facybox a.next,#facybox a.prev,#facybox .closek #facybox .loading
+	{
 	background-repeat: no-repeat;
 }
 
 #facybox a.next {
-  background-position: 9999px 50%;
+	background-position: 9999px 50%;
 }
 
 #facybox a.prev {
-  background-position: -9999px 50%;
+	background-position: -9999px 50%;
 }
-#facybox a.prev:hover{
+
+#facybox a.prev:hover {
 	background-position: 0 50%;
 }
-#facybox a.next:hover{
+
+#facybox a.next:hover {
 	background-position: 100% 50%;
 }
 
@@ -53,14 +57,13 @@
 	height: 30px;
 }
 
-#facybox .prev,
-#facybox .next{
+#facybox .prev,#facybox .next {
 	display: block;
 	position: absolute;
 	cursor: pointer;
 }
 
-#facybox .navigation .counter{
+#facybox .navigation .counter {
 	background: #000;
 	color: #fff;
 	text-align: center;
@@ -72,43 +75,43 @@
 }
 
 #facybox .loading {
-  margin: 0 auto;
-  width: 22px;
-  height: 22px;
-  text-align: center;
+	margin: 0 auto;
+	width: 22px;
+	height: 22px;
+	text-align: center;
 }
 
 #facybox .popup {
-  position: relative;
+	position: relative;
 }
 
 #facybox table {
-  border-collapse: collapse;
+	border-collapse: collapse;
 }
 
 #facybox td {
-  border-bottom: 0;
-  padding: 0;
+	border-bottom: 0;
+	padding: 0;
 }
 
 #facybox .body {
-  padding: 10px;
-  background: #fff;
-  width: auto;
+	padding: 10px;
+	background: #fff;
+	width: auto;
 }
 
 #facybox .loading {
-  text-align: center;
+	text-align: center;
 }
 
 #facybox .image {
-  text-align: center;
-  line-height: 0;
+	text-align: center;
+	line-height: 0;
 }
 
 #facybox img {
-  border: 0;
-  margin: 0;
+	border: 0;
+	margin: 0;
 }
 
 #facybox .footer {
@@ -120,14 +123,14 @@
 }
 
 #facybox .footer img {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
-#facybox .tl, #facybox .tr, #facybox .bl, #facybox .br {
-  height: 10px;
-  width: 10px;
-  overflow: hidden;
-  padding: 0;
+#facybox .tl,#facybox .tr,#facybox .bl,#facybox .br {
+	height: 10px;
+	width: 10px;
+	overflow: hidden;
+	padding: 0;
 }
 
 #facybox_overlay {
@@ -139,10 +142,10 @@
 }
 
 .facybox_hide {
-  z-index:-100;
+	z-index: -100;
 }
 
 .facybox_overlayBG {
-  background-color: #000;
-  z-index: 99;
+	background-color: #000;
+	z-index: 99;
 }

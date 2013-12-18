@@ -6,9 +6,9 @@ import javax.persistence.EntityManager;
 
 import org.mentawai.core.BaseAction;
 
-import br.com.cet.cms.modelo.Exemplo;
+import br.com.cet.cms.modelo.Cliente;
 
-public class ExemploAction extends BaseAction implements ICrudAction{
+public class ClienteAction extends BaseAction implements ICrudAction{
 
 	public String cadastro()  throws Exception{
 		// Não precisa de nenhuma operação, basicamente abre para cadastro.
@@ -26,20 +26,23 @@ public class ExemploAction extends BaseAction implements ICrudAction{
 		System.err.println("Usando EntityManager = " + entityManager);
 		
 		long id = input.getLong("id");
-		
-		// OBS: Tem codigo repetido nas linhas abaixo, tente evitar !!!
+		Cliente cliente;
 		
 		if(id <= 0){ // Novo Cadastro
 		
-			Exemplo exemplo = input.getObject(Exemplo.class);
-			entityManager.persist(exemplo);
+			cliente = input.getObject(Cliente.class);			
 
 		}else{ // Atualizando
 			
-			Exemplo exemplo = entityManager.find(Exemplo.class, input.getLong("id"));
-			input.inject(exemplo);	
-			entityManager.persist(exemplo);
+			cliente = entityManager.find(Cliente.class, input.getLong("id"));
+			input.inject(cliente);				
 			
+		}
+		
+		try {
+			entityManager.persist(cliente);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
 		
 		return SUCCESS;
@@ -49,9 +52,9 @@ public class ExemploAction extends BaseAction implements ICrudAction{
 		// Carregando o EntityManager usando IoC e MentaContainerFilter
 		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
 		
-		Exemplo exemplo = entityManager.find(Exemplo.class, input.getLong("id"));
+		Cliente cliente = entityManager.find(Cliente.class, input.getLong("id"));
 		
-		output.setObject(exemplo); // Extrai todas as propriedades e joga no output
+		output.setObject(cliente); // Extrai todas as propriedades e joga no output
 		
 		listar(); // Mostrar a listagem na tela de cadastro
 		
@@ -62,9 +65,9 @@ public class ExemploAction extends BaseAction implements ICrudAction{
 		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
 		
 	    try {
-	      Exemplo exemplo = entityManager.find(Exemplo.class, input.getLong("id"));
-	      System.out.println("Excluindo os dados de: " + exemplo.getNome());
-	      entityManager.remove(exemplo);
+	    	Cliente cliente = entityManager.find(Cliente.class, input.getLong("id"));
+	      
+	      entityManager.remove(cliente);
 	    } catch (Exception e) {	    	
 	    	output.setValue("erro", e.getMessage());
 	    } 
@@ -77,7 +80,7 @@ public class ExemploAction extends BaseAction implements ICrudAction{
 		EntityManager entityManager = (EntityManager) input.getValue("entityManager");
 		
 		@SuppressWarnings("unchecked")
-		List<Exemplo> lista = entityManager.createQuery("from Exemplo").getResultList();
+		List<Cliente> lista = entityManager.createQuery("from Exemplo").getResultList();
 		
 		output.setValue("lista", lista);
 		
@@ -92,3 +95,4 @@ public class ExemploAction extends BaseAction implements ICrudAction{
 
 
 }
+
